@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(45deg, #f6d02f, #f0f8ff);
+    background: linear-gradient(45deg, #a0c8ff, #f0f8ff);
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
     color: #333;
@@ -126,15 +126,7 @@ body.dark-mode section {
     border-color: #444;
 }
 
-body.dark-mode section h2 {
-    color: #fff;
-}
-
-body.dark-mode section p {
-    color: #ddd;
-}
-
-/* Glowing effect from bottom */
+/* Glowing effect from bottom in Light Mode */
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
@@ -147,32 +139,37 @@ body.dark-mode section p {
     }
 }
 
-/* Dark Mode Glowing Effect from Bottom (Dark Blue Glow) */
-@keyframes darkModeGlowEffect {
+/* Glowing Effect in Light Mode */
+@keyframes lightModeGlowEffect {
     0% {
-        background: #000;
-        box-shadow: 0 0 15px #1e3b5b, 0 0 30px #1e3b5b, 0 0 45px #1e3b5b;
+        box-shadow: 0 0 20px #add8e6, 0 0 50px #add8e6;
     }
     50% {
-        background: #111;
-        box-shadow: 0 0 25px #1e3b5b, 0 0 40px #1e3b5b, 0 0 60px #1e3b5b;
+        box-shadow: 0 0 40px #add8e6, 0 0 60px #add8e6;
     }
     100% {
-        background: #000;
-        box-shadow: 0 0 15px #1e3b5b, 0 0 30px #1e3b5b, 0 0 45px #1e3b5b;
+        box-shadow: 0 0 20px #add8e6, 0 0 50px #add8e6;
     }
 }
 
-/* Additional Styles */
-a {
-    transition: color 0.3s ease;
+/* Dark Mode Glowing Effect (Dark Blue Glow) */
+@keyframes darkModeGlowEffect {
+    0% {
+        box-shadow: 0 0 20px #1e3b5b, 0 0 40px #1e3b5b;
+    }
+    50% {
+        box-shadow: 0 0 40px #1e3b5b, 0 0 60px #1e3b5b;
+    }
+    100% {
+        box-shadow: 0 0 20px #1e3b5b, 0 0 40px #1e3b5b;
+    }
 }
 
-a:hover {
-    color: #ff6347;
+/* Apply glowing effect to sections */
+body.light-mode section {
+    animation: lightModeGlowEffect 10s ease infinite;
 }
 
-/* Apply glowing effect to sections when dark mode is active */
 body.dark-mode section {
     animation: darkModeGlowEffect 10s ease infinite;
 }
