@@ -23,14 +23,17 @@
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>I have completed a diploma in Computer Engineering, a degree in Computer Science and Engineering, and a Master's in Computer Science and Engineering. I am passionate about coding, gaming, and birdwatching. I am highly interested in AOSP projects, learning device tree kernel and vendor files. My hobby is customizing ROMs or enhancing existing ROMs. I am also keen on exploring the latest trends in NLP, AI, and Machine Learning.</p>
+            <p>
+                I have completed a diploma in Computer Engineering, a degree in Computer Science and Engineering, and a Master's in Computer Science and Engineering. I am passionate about coding, gaming, and birdwatching. 
+                My hobbies include customizing ROMs and exploring new trends in NLP, AI, and Machine Learning.
+            </p>
         </section>
         <section id="projects">
             <h2>Projects</h2>
             <ul>
-                <li><a href="https://github.com/helllopratik/evolution_device_kunlun2_row" target="_blank">Project: Device tree for Android 15 of Lenovo K10 Note</a>: A device tree for Lenovo K10 Note on Android 15, which includes the necessary structure and properties to enable AOSP to understand the device configuration.</li>
-                <li><a href="https://github.com/helllopratik/evolution_kernel_lenovo_sdm710" target="_blank">Project: Kernel tree of Android 15 with SDM710</a>: A kernel tree for Android 15 using the SDM710 processor, which I am currently using for the Lenovo K10 Note device to facilitate communication between the operating system and hardware.</li>
-                <li><a href="https://github.com/helllopratik/emotion_chat_with_chatgpt" target="_blank">Project: EmoQuery - A human-like conversation with Gemini AI</a>: A Python-based machine learning project allowing users to interact with Gemini AI, while a local camera identifies the user's emotion. Based on this emotion, the AI generates a context-aware response, creating a more human-like interaction.</li>
+                <li><a href="https://github.com/helllopratik/evolution_device_kunlun2_row" target="_blank">Device Tree for Android 15</a>: Enables AOSP to understand Lenovo K10 Note configurations.</li>
+                <li><a href="https://github.com/helllopratik/evolution_kernel_lenovo_sdm710" target="_blank">Kernel Tree for Android 15</a>: Facilitates OS-to-hardware communication for SDM710-based devices.</li>
+                <li><a href="https://github.com/helllopratik/emotion_chat_with_chatgpt" target="_blank">EmoQuery</a>: AI project combining user emotion with conversation dynamics.</li>
             </ul>
         </section>
         <section id="skills">
@@ -45,7 +48,7 @@
             <h2>Contact</h2>
             <p>Email: <a href="mailto:hellopratik@proton.me">hellopratik@proton.me</a></p>
             <p>GitHub: <a href="https://github.com/helllopratik" target="_blank">github.com/helllopratik</a></p>
-            <p>Instagram: <a href="https://instagram.com/hellopratik" target="_blank">github.com/helllopratik</a></p>
+            <p>Instagram: <a href="https://instagram.com/hellopratik" target="_blank">instagram.com/hellopratik</a></p>
         </section>
     </main>
     <footer>
@@ -57,11 +60,7 @@
 
         function toggleDarkMode() {
             isDarkMode = !isDarkMode;
-            if (isDarkMode) {
-                document.body.classList.add('dark-mode');
-            } else {
-                document.body.classList.remove('dark-mode');
-            }
+            document.body.className = isDarkMode ? "dark-mode" : "light-mode";
         }
     </script>
 </body>
