@@ -62,10 +62,9 @@ main {
 section {
     margin-bottom: 2rem;
     padding: 1rem;
-    border: 1px solid #ddd;
     border-radius: 8px;
     background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, border-color 0.3s;
 }
 
 footer {
@@ -84,6 +83,7 @@ footer {
 .light-mode section {
     border: 1px solid #f9a825;
     background: #fff6e1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .light-mode nav ul li a:hover {
@@ -100,4 +100,14 @@ footer {
 .dark-mode section {
     border: 1px solid #444;
     background: #333;
+    box-shadow: 0 0 15px rgba(0, 128, 255, 0.5), 0 0 20px rgba(0, 128, 255, 0.3);
+}
+
+.dark-mode section:hover {
+    box-shadow: 0 0 25px rgba(0, 128, 255, 0.7), 0 0 30px rgba(0, 128, 255, 0.5);
+}
+
+.dark-mode nav ul li a:hover {
+    color: #80d4ff;
+    text-shadow: 0 0 5px #80d4ff;
 }
