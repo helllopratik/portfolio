@@ -75,6 +75,10 @@ main {
 section {
     margin-bottom: 2em;
     position: relative;
+    padding: 1em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Links and contact styles */
@@ -97,27 +101,40 @@ footer {
 
 /* Dark Mode styles */
 body.dark-mode {
-    background: #333;
+    background: #222;
     color: white;
 }
 
 body.dark-mode header {
-    background-color: #222;
+    background-color: #111;
 }
 
 body.dark-mode nav {
-    background-color: #222;
+    background-color: #111;
 }
 
 body.dark-mode footer {
-    background-color: #222;
+    background-color: #111;
 }
 
 body.dark-mode main {
     background-color: #222;
 }
 
-/* Background Animation: Anime Diamond-like effect */
+body.dark-mode section {
+    background-color: #333;
+    border-color: #444;
+}
+
+body.dark-mode section h2 {
+    color: #fff;
+}
+
+body.dark-mode section p {
+    color: #ddd;
+}
+
+/* Glowing effect from bottom */
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
@@ -130,21 +147,7 @@ body.dark-mode main {
     }
 }
 
-a {
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #ff6347;
-}
-
 /* Dark Mode Glowing Effect from Bottom */
-body.dark-mode main {
-    background: #000;
-    animation: glowEffect 6s ease-in-out infinite;
-}
-
-/* Glowing effect animation */
 @keyframes glowEffect {
     0% {
         background: #000;
@@ -158,4 +161,13 @@ body.dark-mode main {
         background: #000;
         box-shadow: 0 0 15px #00f, 0 0 30px #00f, 0 0 45px #00f;
     }
+}
+
+/* Additional Styles */
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6347;
 }
