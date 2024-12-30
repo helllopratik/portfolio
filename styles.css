@@ -30,6 +30,7 @@ button.toggle-btn {
     border-radius: 5px;
     background: #ff9800;
     color: white;
+    transition: background 0.3s;
 }
 
 button.toggle-btn:hover {
@@ -51,6 +52,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
 main {
@@ -98,16 +100,32 @@ footer {
 }
 
 .dark-mode section {
-    border: 1px solid #444;
+    border: 2px solid rgba(0, 128, 255, 0.5);
     background: #333;
-    box-shadow: 0 0 15px rgba(0, 128, 255, 0.5), 0 0 20px rgba(0, 128, 255, 0.3);
+    box-shadow: 
+        0 0 15px rgba(0, 128, 255, 0.8), 
+        0 0 30px rgba(0, 128, 255, 0.5), 
+        inset 0 0 10px rgba(0, 128, 255, 0.6);
+    transition: box-shadow 0.5s, border-color 0.3s;
 }
 
 .dark-mode section:hover {
-    box-shadow: 0 0 25px rgba(0, 128, 255, 0.7), 0 0 30px rgba(0, 128, 255, 0.5);
+    box-shadow: 
+        0 0 25px rgba(0, 128, 255, 1), 
+        0 0 50px rgba(0, 128, 255, 0.7), 
+        inset 0 0 15px rgba(0, 128, 255, 0.8);
 }
 
 .dark-mode nav ul li a:hover {
     color: #80d4ff;
     text-shadow: 0 0 5px #80d4ff;
+}
+
+.dark-mode button.toggle-btn {
+    background: #004c99;
+    color: #80d4ff;
+}
+
+.dark-mode button.toggle-btn:hover {
+    background: #0066cc;
 }
