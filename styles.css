@@ -1,16 +1,46 @@
+/* Default styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background: linear-gradient(45deg, #f6d02f, #f0f8ff);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
     color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 header {
     text-align: center;
     padding: 2em 0;
-    background: #0078d4;
+    background-color: #0078d4;
     color: white;
 }
+
+header h1 {
+    font-size: 3em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+button.toggle-btn {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 1em;
+    border-radius: 5px;
+}
+
+button.toggle-btn:hover {
+    background-color: #e53d29;
+}
+
+/* Navigation Styles */
 nav ul {
     display: flex;
     justify-content: center;
@@ -18,30 +48,87 @@ nav ul {
     background: #333;
     padding: 0;
 }
+
 nav ul li {
     margin: 0 1em;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
     padding: 0.5em;
     display: block;
 }
+
 nav ul li a:hover {
-    background: #0078d4;
+    background: #ff6347;
     border-radius: 5px;
 }
+
+/* Main content styles */
 main {
     padding: 2em;
     max-width: 800px;
     margin: auto;
 }
+
 section {
     margin-bottom: 2em;
 }
+
+/* Links and contact styles */
+section#contact a {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+section#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 1em;
     background: #333;
     color: white;
+}
+
+/* Dark Mode styles */
+body.dark-mode {
+    background: #333;
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #333;
+}
+
+body.dark-mode nav {
+    background-color: #222;
+}
+
+body.dark-mode footer {
+    background-color: #222;
+}
+
+/* Background Animation: Anime Diamond-like effect */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6347;
 }
